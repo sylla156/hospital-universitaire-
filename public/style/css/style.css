@@ -194,6 +194,77 @@ body::-webkit-scrollbar-thumb {
   font-weight: 900;
   font-style: italic;
 }
+.app__login {
+  height: 100vh;
+  width: 100vw;
+  transform: translateX(100vw);
+  transition: transform 1s;
+  top: 0;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  color: #081c15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__login--container {
+  height: 60%;
+  width: 65%;
+  background-color: #d8f3dc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.app__login--container div:first-child {
+  height: 15%;
+}
+.app__login--container div:first-child img {
+  height: 100%;
+  width: auto;
+}
+.app__login--container div:last-child {
+  height: 70%;
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__login--container div:last-child form label {
+  display: block;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-style: italic;
+  margin: 15px 0 5px 0;
+}
+.app__login--container div:last-child form input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #1d8762;
+  background-color: #b1d0b6e2;
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__login--container div:last-child form input:last-child {
+  width: 30%;
+  margin: 10% auto 0 auto;
+  border: none;
+  background-color: black;
+  color: #d8f3dc;
+  padding: 10px 40px;
+  border-radius: 10%;
+}
+.app__login--container h1 {
+  text-align: center;
+  font-size: 4em;
+  font-style: italic;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 50px 0 0;
+}
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .app {
@@ -259,6 +330,12 @@ body::-webkit-scrollbar-thumb {
   .app__contact--container div:last-child .form p span:first-child {
     font-weight: 900;
     font-style: italic;
+  }
+  .app__login--container {
+    width: 95%;
+  }
+  .app__login--container h1 {
+    text-align: center;
   }
 }
 @media only screen and (min-device-width: 500px) and (max-device-width: 950px) {
