@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 .app__header--nav {
   margin: 20px;
   display: flex;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
   background-color: #d8f3dc;
   padding: 10px 20px;
@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
   color: #081c15;
 }
 .app__about {
-  height: 83vh;
+  height: 93vh;
   width: 100%;
   padding: 15% 1% 0 1%;
   display: flex;
@@ -71,8 +71,8 @@ body::-webkit-scrollbar-thumb {
 }
 .app__about--article h3 {
   text-align: justify;
-  letter-spacing: 0.5em;
-  word-spacing: auto;
+  letter-spacing: auto !important;
+  word-spacing: auto !important;
 }
 .app__about--img {
   width: 50%;
@@ -94,6 +94,49 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(-20deg) translate(0px, 300px);
   cursor: none;
   pointer-events: none;
+}
+.app__contact {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__contact--container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app__contact--container > * {
+  height: 100%;
+  width: 50%;
+}
+.app__contact--container div:first-child {
+  background-color: #000000;
+  padding: 5%;
+}
+.app__contact--container div:first-child h1 span {
+  display: block;
+  font-size: 2.9em;
+}
+.app__contact--container div:first-child h1 span:nth-child(2) {
+  text-align: end;
+}
+.app__contact--container div:first-child h1 span:last-child {
+  text-align: center;
+  font-size: 4.2em;
+  font-weight: bolder;
+  font-style: italic;
+}
+.app__contact--container div:first-child P {
+  word-spacing: 0.5em;
+  margin: 50px;
+}
+.app__contact--container div:last-child {
+  background-color: #d8f3dc;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {

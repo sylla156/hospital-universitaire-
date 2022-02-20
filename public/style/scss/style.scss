@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   &__about {
-    height: 83vh;
+    height: 93vh;
     width: 100%;
     padding: 15% 1% 0 1%;
     display: flex;
@@ -74,8 +74,8 @@ body::-webkit-scrollbar-thumb {
 
       h3 {
         text-align: justify;
-        letter-spacing: 0.5em;
-        word-spacing: auto;
+        letter-spacing: auto !important;
+        word-spacing: auto !important;
       }
     }
 
@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
       width: 50%;
       height: 100%;
       position: relative;
-     
+
       img {
         width: auto;
         height: 90%;
@@ -103,17 +103,66 @@ body::-webkit-scrollbar-thumb {
       pointer-events: none;
     }
   }
+
+  &__contact {
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    @include center();
+    &--container {
+      height: 90%;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > * {
+        height: 100%;
+        width: 50%;
+      }
+
+      div:first-child {
+        background-color: #000000;
+        padding:5%;
+        h1{
+           span{
+               display: block;
+               font-size: 2.9em;
+           }
+           span:nth-child(2){
+               text-align: end;
+           }
+
+           span:last-child{
+               text-align: center;
+               font-size: 4.2em;
+               font-weight: bolder;
+               font-style: italic;
+
+           }
+        }        
+
+        P{
+            word-spacing: 0.5em;
+            margin: 50px;
+
+        }
+      }
+
+      div:last-child {
+        background-color: $color;
+      }
+    }
+  }
 }
 
-
 @include mobile() {
-.app {
+  .app {
     height: 300vh;
 
     &__header {
-        &--title {
-            font-size: 1em;
-        }
+      &--title {
+        font-size: 1em;
+      }
     }
     &__about {
       height: 183vh;
@@ -124,7 +173,7 @@ body::-webkit-scrollbar-thumb {
       justify-content: stretch;
       position: relative;
       overflow: hidden;
-  
+
       &--article {
         width: 100%;
         height: 100%;
@@ -133,16 +182,15 @@ body::-webkit-scrollbar-thumb {
           font-size: 4em;
           text-transform: uppercase;
           font-weight: bolder;
-          
         }
-  
+
         h3 {
           text-align: justify;
           letter-spacing: 0.5em;
           word-spacing: 1em;
         }
       }
-  
+
       &--img {
         width: 100%;
         height: 70%;
@@ -151,99 +199,88 @@ body::-webkit-scrollbar-thumb {
           height: auto;
         }
       }
-  
-   
     }
   }
 }
 
 @include tab() {
-    .app {
-        height: 300vh;
-    
-        &__header {
-            &--title {
-                font-size: 1em;
-            }
+  .app {
+    height: 300vh;
+
+    &__header {
+      &--title {
+        font-size: 1em;
+      }
+    }
+    &__about {
+      height: 183vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      position: relative;
+      overflow: hidden;
+
+      &--article {
+        width: 100%;
+        height: 100%;
+        h1 {
+          font-style: italic;
+          font-size: 3em;
+          text-transform: uppercase;
+          font-weight: bolder;
         }
-        &__about {
-          height: 183vh;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: stretch;
-          justify-content: stretch;
-          position: relative;
-          overflow: hidden;
-      
-          &--article {
-            width: 100%;
-            height: 100%;
-            h1 {
-              font-style: italic;
-              font-size: 3em;
-              text-transform: uppercase;
-              font-weight: bolder;
-              
-            }
-      
-            h3 {
-              text-align: justify;
-              letter-spacing: auto;
-              word-spacing: auto;
-              font-size: 1.4em;
-            }
-          }
-      
-          &--img {
-            width: 100%;
-            height: 70%;
-            img {
-              width: auto;
-              height: 100%;
-            }
-          }
-      
-       
+
+        h3 {
+          text-align: justify;
+          letter-spacing: auto;
+          word-spacing: auto;
+          font-size: 1.4em;
         }
-      } 
+      }
+
+      &--img {
+        width: 100%;
+        height: 70%;
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
 }
 
 @include pcPortable() {
-    .app {
-       
-        &__about {
-       
-      
-          &--article {
-            width: 100%;
-            height: 100%;
-            h1 {
-              font-style: italic;
-              font-size: 3em;
-              text-transform: uppercase;
-              font-weight: bolder;
-              
-            }
-      
-            h3 {
-              text-align: justify;
-              letter-spacing: auto;
-              word-spacing: auto;
-              font-size: 1.5em;
-            }
-          }
-      
-          &--img {
-            width: 100%;
-            height: 70%;
-            img {
-              width: auto;
-              height: 100%;
-            }
-          }
-      
-       
+  .app {
+    &__about {
+      &--article {
+        width: 100%;
+        height: 100%;
+        h1 {
+          font-style: italic;
+          font-size: 3em;
+          text-transform: uppercase;
+          font-weight: bolder;
         }
-      } 
+
+        h3 {
+          text-align: justify;
+          letter-spacing: auto;
+          word-spacing: auto;
+          font-size: 1.5em;
+        }
+      }
+
+      &--img {
+        width: 100%;
+        height: 70%;
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
 }
