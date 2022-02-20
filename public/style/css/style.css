@@ -56,6 +56,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+  overflow: hidden;
 }
 .app__about--article {
   width: 50%;
@@ -69,9 +71,8 @@ body::-webkit-scrollbar-thumb {
 }
 .app__about--article h3 {
   text-align: justify;
-  margin: 50px 0 0 0;
   letter-spacing: 0.5em;
-  word-spacing: 1em;
+  word-spacing: auto;
 }
 .app__about--img {
   width: 50%;
@@ -81,6 +82,99 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   height: 100%;
   object-fit: cover;
+}
+.app__about::after {
+  content: "";
+  position: absolute;
+  height: 80vh;
+  width: 150vw;
+  background-color: #d8f3dc;
+  mix-blend-mode: difference;
+  transform: rotate(-30deg) translate(0, 300px);
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .app {
+    height: 300vh;
+  }
+  .app__header--title {
+    font-size: 1em;
+  }
+  .app__about {
+    height: 183vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    position: relative;
+    overflow: hidden;
+  }
+  .app__about--article {
+    width: 100%;
+    height: 100%;
+  }
+  .app__about--article h1 {
+    font-style: italic;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  .app__about--article h3 {
+    text-align: justify;
+    letter-spacing: 0.5em;
+    word-spacing: 1em;
+  }
+  .app__about--img {
+    width: 100%;
+    height: 70%;
+  }
+  .app__about--img img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (min-device-width: 500px) and (max-device-width: 950px) {
+  .app {
+    height: 300vh;
+  }
+  .app__header--title {
+    font-size: 1em;
+  }
+  .app__about {
+    height: 183vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    position: relative;
+    overflow: hidden;
+  }
+  .app__about--article {
+    width: 100%;
+    height: 100%;
+  }
+  .app__about--article h1 {
+    font-style: italic;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  .app__about--article h3 {
+    text-align: justify;
+    letter-spacing: auto;
+    word-spacing: auto;
+    font-size: 1.4em;
+  }
+  .app__about--img {
+    width: 100%;
+    height: 70%;
+  }
+  .app__about--img img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

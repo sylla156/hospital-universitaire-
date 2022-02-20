@@ -1,91 +1,206 @@
-@use './pallette.scss' as *;
-@use './mixin.scss' as *;
+@use "./pallette.scss" as *;
+@use "./mixin.scss" as *;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: $color;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $color;
 }
 
 body::-webkit-scrollbar {
-    width: 3px;
-    background-color: $color;
+  width: 3px;
+  background-color: $color;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #000000;
+  background-color: #000000;
 }
 
-.app{
-    height: 200vh;
-    background-color: $backgroundColor;
-    color: $color;
+.app {
+  height: 200vh;
+  background-color: $backgroundColor;
+  color: $color;
+
+  &__header {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--title {
+      margin: 20px;
+    }
+
+    &--nav {
+      margin: 20px;
+      @include center();
+      background-color: $color;
+      padding: 10px 20px;
+      border-radius: 5%;
+      color: $backgroundColor;
+    }
+  }
+
+  &__about {
+    height: 83vh;
+    width: 100%;
+    padding: 15% 5% 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+
+    &--article {
+      width: 50%;
+      height: 100%;
+      h1 {
+        font-style: italic;
+        font-size: 6em;
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+
+      h3 {
+        text-align: justify;
+        letter-spacing: 0.5em;
+        word-spacing: auto;
+      }
+    }
+
+    &--img {
+      width: 50%;
+      height: 100%;
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 80vh;
+      width: 150vw;
+      background-color: $color;
+      mix-blend-mode: difference;
+      transform: rotate(-30deg) translate(0, 300px);
+    }
+  }
+}
+
+
+@include mobile() {
+.app {
+    height: 300vh;
 
     &__header {
-        height: 7vh;
-        width: 100%;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        
-        &--title{
-            margin: 20px;
-        }
-
-        &--nav{
-            margin: 20px;
-            @include center();
-            background-color: $color;
-            padding: 10px 20px;
-            border-radius: 5%;
-            color: $backgroundColor;
+        &--title {
+            font-size: 1em;
         }
     }
-
     &__about {
-        height: 83vh;
+      height: 183vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      position: relative;
+      overflow: hidden;
+  
+      &--article {
         width: 100%;
-        padding: 15% 5% 0 5%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        &--article {
-            width: 50%;
-            height: 100%;
-            h1{
-                font-style: italic;
-                font-size: 6em;
-                text-transform: uppercase;
-                font-weight: bolder;
-
-            }
-
-            h3{
-                text-align: justify;
-                margin: 50px 0 0 0;
-                letter-spacing: 0.5em;
-                word-spacing: 1em;
-            }
+        height: 100%;
+        h1 {
+          font-style: italic;
+          font-size: 4em;
+          text-transform: uppercase;
+          font-weight: bolder;
+          
         }
-
-        &--img {
-            width: 50%;
-            height: 100%;
-            img{
-                width: auto;
-                height: 100%;
-                object-fit: cover;
-            }
+  
+        h3 {
+          text-align: justify;
+          letter-spacing: 0.5em;
+          word-spacing: 1em;
         }
+      }
+  
+      &--img {
+        width: 100%;
+        height: 70%;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+  
+   
     }
+  }
+}
+
+@include tab() {
+    .app {
+        height: 300vh;
+    
+        &__header {
+            &--title {
+                font-size: 1em;
+            }
+        }
+        &__about {
+          height: 183vh;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: stretch;
+          position: relative;
+          overflow: hidden;
+      
+          &--article {
+            width: 100%;
+            height: 100%;
+            h1 {
+              font-style: italic;
+              font-size: 3em;
+              text-transform: uppercase;
+              font-weight: bolder;
+              
+            }
+      
+            h3 {
+              text-align: justify;
+              letter-spacing: auto;
+              word-spacing: auto;
+              font-size: 1.4em;
+            }
+          }
+      
+          &--img {
+            width: 100%;
+            height: 70%;
+            img {
+              width: auto;
+              height: 100%;
+            }
+          }
+      
+       
+        }
+      } 
 }
