@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="vanilla.js" defer></script>
     <title>hospital</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
         </nav>
       </header>
       <section class="app__about">
-          <div class="app__about--img"><img src="header.jpg" alt="" /></div>
+          <div class="app__about--img" data-tilt><img src="header.jpg" alt="" /></div>
         <article class="app__about--article">
             <h1>qui nous sommes?</h1>
             <h3>Notre équipe médicale travaille en étroite collaboration avec une équipe de plus de 100 médecins et experts de la santé à travers le pays dans un large éventail de domaines de spécialité pour s'assurer que notre agence est efficace et précise pour vous aider à vivre une vie plus saine.</h3>
@@ -24,5 +25,8 @@
       </section>
    
     </main>
+    <script>
+const element = document.querySelector(".app_about--img img");
+    </script>
   </body>
 </html>
