@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="vanilla.js" defer></script>
+    <script src="index.js" defer></script>
     <title>hospital</title>
   </head>
   <body>
@@ -27,17 +28,37 @@
            <main class="app__contact--container">
                <div>
                   <h1><span>prenez un</span>  <span> rendez-vous </span><span>avec les </span> <span>meilleurs</span> </h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, blanditiis quaerat hic veritatis iste fuga? Recusandae quasi numquam maiores fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, qui. Eaque, cum minus ab unde doloribus cumque maxime suscipit dolores ipsum officiis asperiores perferendis quidem, vel ut voluptas nesciunt corrupti.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, blanditiis quaerat hic veritatis iste fuga? Recusandae quasi numquam maiores fuga?.</p>
                </div>
                <div>
-                   <p>last element</p>
+                   
+                <div class="form">
+                    <h1>contact</h1>
+                    <form action="/" method="post">
+                        <label for="firstName">first name</label>
+                        <input type="text" id="firstName">
+
+                        <label for="lastName">last name</label>
+                        <input type="text" id="lastName">
+
+                        <label for="email">email</label>
+                        <input type="email" id="email">
+
+                        <label for="tel">telephone</label>
+                        <input type="tel"  id="tel">
+
+                        <label for="message">message</label>
+                        <textarea  id="message" cols="30" rows="10"></textarea>
+
+                        <input type="submit" value="envoyer" class="submit">
+                    </form>
+                   <p><span>email personnel:</span> <span>ibrahimsyllac196@gmail.com</span></p>
+                </div>
+
                </div>
            </main>
        </section>
     </main>
-    <script>
-const element = document.querySelector(".app_about--img img");
-VanillaTilt.init(element,);
-    </script>
+  
   </body>
 </html>

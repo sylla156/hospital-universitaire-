@@ -8,6 +8,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar-track {
@@ -118,30 +119,86 @@ body::-webkit-scrollbar-thumb {
   background-color: #000000;
   padding: 5%;
 }
+.app__contact--container div:first-child h1 {
+  text-transform: uppercase;
+}
 .app__contact--container div:first-child h1 span {
   display: block;
-  font-size: 2.9em;
+  font-size: 2.5em;
 }
 .app__contact--container div:first-child h1 span:nth-child(2) {
   text-align: end;
 }
 .app__contact--container div:first-child h1 span:last-child {
   text-align: center;
-  font-size: 4.2em;
+  font-size: 3.2em;
   font-weight: bolder;
   font-style: italic;
 }
 .app__contact--container div:first-child P {
   word-spacing: 0.5em;
   margin: 50px;
+  text-align: center;
 }
 .app__contact--container div:last-child {
   background-color: #d8f3dc;
+  color: #081c15;
+}
+.app__contact--container div:last-child .form {
+  height: 100%;
+}
+.app__contact--container div:last-child .form h1 {
+  height: 10%;
+  text-align: center;
+  font-size: 3em;
+}
+.app__contact--container div:last-child .form form {
+  height: 70%;
+  width: 50%;
+  margin: 0 auto;
+}
+.app__contact--container div:last-child .form form label {
+  display: block;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-style: italic;
+  margin: 15px 0 5px 0;
+}
+.app__contact--container div:last-child .form form input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #1d8762;
+  background-color: #b1d0b6e2;
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__contact--container div:last-child .form form input:last-child {
+  width: 30%;
+  margin: 10% auto 0 auto;
+  border: none;
+  background-color: black;
+  color: #d8f3dc;
+}
+.app__contact--container div:last-child .form form textarea {
+  border: none;
+  background-color: #b1d0b6e2;
+}
+.app__contact--container div:last-child .form p {
+  height: 10%;
+  font-size: 0.7em;
+}
+.app__contact--container div:last-child .form p span:first-child {
+  font-weight: 900;
+  font-style: italic;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .app {
     height: 300vh;
+    overflow-x: hidden;
   }
   .app__header--title {
     font-size: 1em;
@@ -168,8 +225,6 @@ body::-webkit-scrollbar-thumb {
   }
   .app__about--article h3 {
     text-align: justify;
-    letter-spacing: 0.5em;
-    word-spacing: 1em;
   }
   .app__about--img {
     width: 100%;
@@ -178,6 +233,32 @@ body::-webkit-scrollbar-thumb {
   .app__about--img img {
     width: 100%;
     height: auto;
+  }
+  .app__contact--container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .app__contact--container > * {
+    width: 100%;
+  }
+  .app__contact--container div:first-child h1 span {
+    font-size: 2em;
+  }
+  .app__contact--container div:first-child h1 span:last-child {
+    font-size: 2.1em;
+  }
+  .app__contact--container div:last-child .form form {
+    width: 80%;
+  }
+  .app__contact--container div:last-child .form p {
+    height: 10%;
+    font-size: 0.7em;
+    padding: 9% 0 0 0;
+  }
+  .app__contact--container div:last-child .form p span:first-child {
+    font-weight: 900;
+    font-style: italic;
   }
 }
 @media only screen and (min-device-width: 500px) and (max-device-width: 950px) {
@@ -220,6 +301,31 @@ body::-webkit-scrollbar-thumb {
   .app__about--img img {
     width: auto;
     height: 100%;
+  }
+  .app__contact--container {
+    height: 100%;
+    width: 100%;
+  }
+  .app__contact--container > * {
+    width: 50%;
+  }
+  .app__contact--container div:first-child h1 span {
+    font-size: 2.2em;
+  }
+  .app__contact--container div:first-child h1 span:last-child {
+    font-size: 2.4em;
+  }
+  .app__contact--container div:last-child .form form {
+    width: 80%;
+  }
+  .app__contact--container div:last-child .form p {
+    height: 10%;
+    font-size: 0.7em;
+    padding: 13% 0 0 0;
+  }
+  .app__contact--container div:last-child .form p span:first-child {
+    font-weight: 900;
+    font-style: italic;
   }
 }
 @media only screen and (min-device-width: 1000px) and (max-device-width: 1100px) {
