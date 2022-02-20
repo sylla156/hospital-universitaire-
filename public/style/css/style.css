@@ -49,5 +49,38 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5%;
   color: #081c15;
 }
+.app__about {
+  height: 83vh;
+  width: 100%;
+  padding: 15% 5% 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.app__about--article {
+  width: 50%;
+  height: 100%;
+}
+.app__about--article h1 {
+  font-style: italic;
+  font-size: 6em;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.app__about--article h3 {
+  text-align: justify;
+  margin: 50px 0 0 0;
+  letter-spacing: 0.5em;
+  word-spacing: 1em;
+}
+.app__about--img {
+  width: 50%;
+  height: 100%;
+}
+.app__about--img img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=style.css.map */

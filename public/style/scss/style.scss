@@ -51,4 +51,41 @@ body::-webkit-scrollbar-thumb {
             color: $backgroundColor;
         }
     }
+
+    &__about {
+        height: 83vh;
+        width: 100%;
+        padding: 15% 5% 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &--article {
+            width: 50%;
+            height: 100%;
+            h1{
+                font-style: italic;
+                font-size: 6em;
+                text-transform: uppercase;
+                font-weight: bolder;
+
+            }
+
+            h3{
+                text-align: justify;
+                margin: 50px 0 0 0;
+                letter-spacing: 0.5em;
+                word-spacing: 1em;
+            }
+        }
+
+        &--img {
+            width: 50%;
+            height: 100%;
+            img{
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
