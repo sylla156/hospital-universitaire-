@@ -504,6 +504,19 @@ body::-webkit-scrollbar-thumb {
   background-color: $color;
   position: relative;
   overflow: hidden !important;
+  position: relative;
+  &__exit {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: $backgroundColor;
+    color: $color;
+    padding: 10px 20px;
+    border-radius: 10%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+  }
   &__container {
     width: 93vw;
     height: 80vh;

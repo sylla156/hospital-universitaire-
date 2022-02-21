@@ -9,6 +9,8 @@
  - puis vous de avoir ** mysql ** de installer sur votre machine 
  - puis allez dans le dossier models et le fichier connection
  - arriver dans le fichier veillez entre les donnees de connexion a votre base de donnee
+ - et par default et fichier de base de donne vous est fourni pour ne pas casser le code
+ - veuillez prendre le contenue de cette base de donne pour pour exceuter dans votre base de donne 
  - pour lancer l'application il vous suffir de faire dans l'invite de commande ``` npm start  ```
  - par defautlt le port utiliser est ** 3000 ** pour le modifier ils se trouve dans le fichier seveur a la dernier ligne
 

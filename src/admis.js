@@ -22,3 +22,8 @@ int.forEach((btn) => {
       btn.parentElement.children[7].children[0].children[0].value;
   });
 });
+
+const exit = document.querySelector('.admis__exit');
+exit.addEventListener("click", (e) => {
+  location.pathname = '/';
+})

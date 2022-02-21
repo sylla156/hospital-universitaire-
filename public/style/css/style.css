@@ -441,6 +441,19 @@ body::-webkit-scrollbar-thumb {
   background-color: #d8f3dc;
   position: relative;
   overflow: hidden !important;
+  position: relative;
+}
+.admis__exit {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #081c15;
+  color: #d8f3dc;
+  padding: 10px 20px;
+  border-radius: 10%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
 }
 .admis__container {
   width: 93vw;
