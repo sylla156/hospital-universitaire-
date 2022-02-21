@@ -438,6 +438,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   background-color: #d8f3dc;
+  position: relative;
   overflow: hidden !important;
 }
 .admis__container {
@@ -505,6 +506,98 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   text-transform: uppercase;
 }
+.admis__login {
+  height: 100vh;
+  width: 100vw;
+  transform: translateX(100vw);
+  transition: transform 1s;
+  top: 0;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  color: #081c15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admis__login--container {
+  height: 80%;
+  width: 65%;
+  background-color: #d8f3dc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.admis__login--container div:first-child {
+  height: 15%;
+}
+.admis__login--container div:first-child img {
+  height: 100%;
+  width: auto;
+}
+.admis__login--container h1 {
+  text-align: center;
+  font-size: 2em;
+  font-style: italic;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 50px 0 0;
+}
+.admis__login--container div:last-child {
+  background-color: #d8f3dc;
+  color: #081c15;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admis__login--container div:last-child .form {
+  height: 90%;
+  width: 80%;
+}
+.admis__login--container div:last-child .form form {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.admis__login--container div:last-child .form form label {
+  display: block;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-style: italic;
+  margin: 10px 0 5px 0;
+}
+.admis__login--container div:last-child .form form input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #1d8762;
+  background-color: #b1d0b6e2;
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admis__login--container div:last-child .form form input:last-child {
+  width: 30%;
+  margin: 15px 0 0 0;
+  border: none;
+  background-color: black;
+  color: #d8f3dc;
+}
+.admis__login--container div:last-child .form form textarea {
+  border: none;
+  background-color: #b1d0b6e2;
+}
+.admis__login--container div:last-child .form p {
+  height: 10%;
+  font-size: 0.7em;
+}
+.admis__login--container div:last-child .form p span:first-child {
+  font-weight: 900;
+  font-style: italic;
+}
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .admis__container {
@@ -512,6 +605,32 @@ body::-webkit-scrollbar-thumb {
   }
   .admis__container--title {
     font-size: 1.3em;
+  }
+  .admis__login--container {
+    width: 85%;
+  }
+  .admis__login--container div:first-child {
+    height: 8%;
+  }
+  .admis__login--container div:first-child img {
+    height: 100%;
+  }
+}
+@media only screen and (min-device-width: 500px) and (max-device-width: 950px) {
+  .admis__container {
+    padding: 0;
+  }
+  .admis__container--title {
+    font-size: 1.3em;
+  }
+  .admis__login--container {
+    width: 85%;
+  }
+  .admis__login--container div:first-child {
+    height: 8%;
+  }
+  .admis__login--container div:first-child img {
+    height: 100%;
   }
 }
 

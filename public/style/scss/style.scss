@@ -501,6 +501,7 @@ body::-webkit-scrollbar-thumb {
   width: 100vw;
   @include center();
   background-color: $color;
+  position: relative;
   overflow: hidden !important;
   &__container {
     width: 93vw;
@@ -582,6 +583,96 @@ body::-webkit-scrollbar-thumb {
       }
     }
   }
+  
+  &__login {
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(100vw);
+    transition: transform 1s;
+    top: 0;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    color: $backgroundColor;
+    @include center();
+    &--container {
+      height: 80%;
+      width: 65%;
+      background-color: $color;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      div:first-child {
+        height: 15%;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        font-style: italic;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0 50px 0 0;
+      }
+
+      div:last-child {
+        background-color: $color;
+        color: $backgroundColor;
+        width: 100%;
+        height: 100%;
+        @include center();
+        .form {
+          height: 90%;
+          width: 80%;
+          form {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            label {
+              display:block;
+              text-transform: capitalize;
+              font-weight: bolder;
+              font-style: italic;
+              margin: 10px 0 5px 0;
+            }
+            input {
+              display: block;
+              border: none;
+              border-bottom: 1px solid $backgroundColorInput;
+              background-color: $colorInput;
+              height: 4%;
+              width: 100%;
+              @include center();
+              &:last-child {
+                width: 30%;
+                margin: 15px 0 0 0;
+                border: none;
+                background-color: black;
+                color: $color;
+              }
+            }
+
+            textarea {
+              border: none;
+              background-color: $colorInput;
+            }
+          }
+
+          p {
+            height: 10%;
+            font-size: 0.7em;
+            span:first-child {
+              font-weight: 900;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include mobile() {
@@ -592,5 +683,45 @@ body::-webkit-scrollbar-thumb {
         font-size: 1.3em;
       }
     }
+    &__login {
+      &--container {
+        width: 85%;
+       
+        div:first-child {
+          height: 8%;
+          img {
+            height: 100%;
+          }
+        }
+     
+      }
+    }
+    
+  }
+}
+
+
+@include tab(){
+  .admis {
+    &__container {
+      padding: 0;
+      &--title {
+        font-size: 1.3em;
+      }
+    }
+    &__login {
+      &--container {
+        width: 85%;
+       
+        div:first-child {
+          height: 8%;
+          img {
+            height: 100%;
+          }
+        }
+     
+      }
+    }
+    
   }
 }
