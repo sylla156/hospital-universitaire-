@@ -3,7 +3,10 @@ const app = express();
 const bodyParser =require('body-parser');
 const CreateRendezVous = require('./models/CreateRendezVous');
 const ConnectAdmis = require('./models/ConnectAdmis');
-
+const AllRendezVous = require('./models/AllRendezVous');
+const DeleteRendezVous = require('./models/DeleteRendezVous')
+const res = require("express/lib/response");
+const url = require('url')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -35,10 +38,21 @@ app.post('/render', (request , response) => {
 
 app.post('/admis', (request, response) => {
   ConnectAdmis.check(request.body.email, request.body.password, () => {
-    response.render('index.ejs',{dashboard: 'true'})
+    AllRendezVous((results) => {
+    response.render('index.ejs',{dashboard: 'true', results: results})
+    })
   },() => {
     response.render("index.ejs", { dashboard: "false" });
   });
+})
+
+app.post('/delete', (request,response) => {
+  let id = request.body.delete;
+  id = parseInt(id)
+  console.log(id);
+  DeleteRendezVous((results) => {
+    response.render('index.ejs',{dashboard: 'true', results: results})
+    },id)
 })
 
 app.listen(3000);

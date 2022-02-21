@@ -492,14 +492,22 @@ body::-webkit-scrollbar-thumb {
   word-wrap: break-word;
   padding: 15px;
 }
-.admis__container--dashboard table tbody tr td:last-child a {
-  background-color: #dc3030ea;
-  padding: 10px;
+.admis__container--dashboard table tbody tr td:last-child input {
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  cursor: none;
+  opacity: 0;
+}
+.admis__container--dashboard table tbody tr td:last-child button {
+  background-color: red;
   color: #081c15;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 10px;
+  transform: translate(0, -8px);
 }
-.admis__container--dashboard table tbody tr td:nth-child(7) a {
+.admis__container--dashboard table tbody tr td:nth-child(7) button {
   padding: 10px;
   background-color: #d8f3dc;
   color: #081c15;

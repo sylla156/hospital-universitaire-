@@ -1,0 +1,13 @@
+<tr>
+    <td><%= result.firstname %> </td>
+    <td><%= result.lastname %> </td>
+    <td><%= result.phone %> </td>
+    <td><%= result.email  %> </td>
+    <td><%= result.message %> </td>
+    <td><%= result.create_time %> </td>
+    <td class="update"><button>modifier</button></td>
+    <td><form action="/delete" method="post">
+        <input type="text" value='<%= result.id %> ' name="delete">
+        <button type="submit">submit</button>
+    </form></td>
+  </tr>

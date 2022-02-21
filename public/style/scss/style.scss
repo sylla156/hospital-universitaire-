@@ -523,6 +523,7 @@ body::-webkit-scrollbar-thumb {
       height: 90%;
       min-width: 50%;
       overflow: scroll;
+
       &::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         background-color: $color;
@@ -553,6 +554,7 @@ body::-webkit-scrollbar-thumb {
         }
 
         tbody {
+
           tr {
             td {
               text-align: center;
@@ -560,22 +562,34 @@ body::-webkit-scrollbar-thumb {
               padding: 15px;
 
               &:last-child {
-                a{
-                 background-color: #dc3030ea;
+                input{
+                  height: 0;
+                  width: 0;
+                  pointer-events: none;
+                  cursor: none;
+                  opacity: 0;
+                }
+
+                button {
+                  background-color: red;
+                  color: $backgroundColor;
+                  text-decoration: none;
+                  text-transform: uppercase;
                  padding: 10px;
-                 color: $backgroundColor;
-                 text-decoration: none;
-                 text-transform: uppercase;
+                 transform: translate(0,-8px);
                 }
               }
               &:nth-child(7) {
-                a{
+                
+                button {
+
                  padding: 10px;
                   background-color: $color;
                   color: $backgroundColor;
                   text-decoration: none;
                   text-transform: uppercase;
                 }
+                
               }
             }
           }

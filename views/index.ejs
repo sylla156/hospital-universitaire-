@@ -7,7 +7,8 @@
 <% } %> 
 
 
-<% if (dashboard == 'true') { %>
+<% if (dashboard == 'true' && results) { %>
+
 
 
 <main class="admis">
@@ -28,17 +29,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>sylla</td>
-              <td>ibrahim</td>
-              <td>0000000000</td>
-              <td>syllaibrahim@gmail.con</td>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eaque!</td>
-              <td>3 jours</td>
-              <td class="update"><a href="">modifier</a></td>
-              <td><a href="">suprimer</a></td>
-            </tr>
-          
+            <% if (results) { %>
+             
+            <% results.map(function(result){ %>
+              <%- include('./pages/admis/list.ejs', {result: result}); %>
+            <% }); %>
+
+            <% } %>
+
           </tbody>
         </table>
       </div>
