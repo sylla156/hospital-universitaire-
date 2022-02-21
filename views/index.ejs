@@ -10,6 +10,9 @@
     <title>hospital</title>
   </head>
   <body>
+      <%= dashboard %> 
+      <% if (dashboard == 'false') { %>
+       
     <main class="app">
       <header class="app__header">
         <h1 class="app__header--title">Centre médical</h1>
@@ -66,12 +69,12 @@
                 </div>
                 <h1>login</h1>
                 <div class="form">
-                    <form action="/render" method="post">
+                    <form action="/admis" method="post">
                         <label for="email">email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email">
                         
                         <label for="password">password</label>
-                        <input type="password" id="password">
+                        <input type="password" id="password" name="password">
                         
                         <input type="submit" value="envoyer">
                     </form>
@@ -79,6 +82,9 @@
            </div>
        </section>
     </main>
-  
+    <% } %>
+  <% if (dashboard == 'true') { %>
+   <h1>hello world</h1>
+  <% } %>
   </body>
 </html>
