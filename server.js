@@ -5,6 +5,7 @@ const CreateRendezVous = require('./models/CreateRendezVous');
 const ConnectAdmis = require('./models/ConnectAdmis');
 const AllRendezVous = require('./models/AllRendezVous');
 const DeleteRendezVous = require('./models/DeleteRendezVous')
+const UpdateRendezvous = require('./models/UpdateRendezvous');
 const res = require("express/lib/response");
 const url = require('url')
 
@@ -35,6 +36,23 @@ app.post('/render', (request , response) => {
   CreateRendezVous.create(firstName, lastName , parseInt(phone) , email , message);
 
 })
+
+
+app.post('/update', (request , response) => {
+  const firstName = request.body.firstName;
+  const lastName = request.body.lastName;
+  const phone = request.body.phone;
+  const email = request.body.email;
+  const message = request.body.message;
+  const id = request.body.id;
+
+  UpdateRendezvous(firstName, lastName , parseInt(phone) , email , message, id,(results) => {
+    response.render('index.ejs',{dashboard: 'true', results: results})
+    });
+
+})
+
+
 
 app.post('/admis', (request, response) => {
   ConnectAdmis.check(request.body.email, request.body.password, () => {
