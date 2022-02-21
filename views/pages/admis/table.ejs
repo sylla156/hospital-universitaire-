@@ -1,0 +1,29 @@
+<div class="admis__container">
+    <h1 class="admis__container--title">tableau de bord</h1>
+    <div class="admis__container--dashboard">
+      <table>
+        <thead>
+          <tr>
+            <th>first name</th>
+            <th>last name</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>message</th>
+            <th>date</th>
+           <th>modifier</th>
+           <th>suprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (results) { %>
+           
+          <% results.map(function(result){ %>
+            <%- include('./component/tablelist.ejs', {result: result}); %>
+          <% }); %>
+
+          <% } %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>

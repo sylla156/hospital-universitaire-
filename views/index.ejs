@@ -9,76 +9,7 @@
 
 <% if (dashboard == 'true' && results) { %>
 
-
-
-<main class="admis">
-    <div class="admis__container">
-      <h1 class="admis__container--title">tableau de bord</h1>
-      <div class="admis__container--dashboard">
-        <table>
-          <thead>
-            <tr>
-              <th>first name</th>
-              <th>last name</th>
-              <th>phone</th>
-              <th>email</th>
-              <th>message</th>
-              <th>date</th>
-             <th>modifier</th>
-             <th>suprimer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% if (results) { %>
-             
-            <% results.map(function(result){ %>
-              <%- include('./pages/admis/list.ejs', {result: result}); %>
-            <% }); %>
-
-            <% } %>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="admis__login">
-      <div class="admis__login--container">
-        <div class="exit">
-          <img src="exit.png" alt="quitter" />
-        </div>
-        <h1>modifier</h1>
-        <div>
-          <div class="form">
-            <form action="/update" method="POST" class="formjs">
-              <label for="email">first name</label>
-              <input type="text" id="firstName" name="firstName" />
-  
-              <label for="lastName">last name</label>
-              <input type="text" id="lastName" name="lastName" />
-  
-              <label for="eail">email</label>
-              <input type="email" id="eail" name="email" />
-  
-              <label for="tel">telephone</label>
-              <input type="tel" id="tel" name="phone" />
-  
-              <label for="message">message</label>
-              <textarea
-                id="message"
-                name="message"
-                cols="30"
-                rows="10"
-              ></textarea>
-              <input type="text" name="id">
-              <input type="submit" value="envoyer" class="submit" />
-            </form>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-</main>
-
+   <%- include('./pages/admis/main.ejs') %> 
 
 <% } %>
 
