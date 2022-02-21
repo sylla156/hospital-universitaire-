@@ -296,6 +296,7 @@ body::-webkit-scrollbar-thumb {
   }
   .app__about--article h3 {
     text-align: justify;
+    line-height: 50px;
   }
   .app__about--img {
     width: 100%;
