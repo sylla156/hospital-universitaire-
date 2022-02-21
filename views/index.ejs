@@ -1,90 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="vanilla.js" defer></script>
-    <script src="index.js" defer></script>
-    <title>hospital</title>
-  </head>
-  <body>
-      <%= dashboard %> 
-      <% if (dashboard == 'false') { %>
-       
-    <main class="app">
-      <header class="app__header">
-        <h1 class="app__header--title">Centre médical</h1>
-        <nav class="app__header--nav">
-          <p>login</p>
-        </nav>
-      </header>
-      <section class="app__about">
-          <div class="app__about--img" data-tilt><img src="header.jpg" alt="" /></div>
-        <article class="app__about--article">
-            <h1>qui nous sommes?</h1>
-            <h3>Notre équipe médicale travaille en étroite collaboration avec une équipe de plus de 100 médecins et experts de la santé à travers le pays dans un large éventail de domaines de spécialité pour s'assurer que notre agence est efficace et précise pour vous aider à vivre une vie plus saine.</h3>
-        </article>
-      </section>
-       <section class="app__contact">
-           <main class="app__contact--container">
-               <div>
-                  <h1><span>prenez un</span>  <span> rendez-vous </span><span>avec les </span> <span>meilleurs</span> </h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, blanditiis quaerat hic veritatis iste fuga? Recusandae quasi numquam maiores fuga?.</p>
-               </div>
-               <div>
-                   
-                <div class="form">
-                    <h1>contact</h1>
-                    <form action="/render" method="POST">
-                        <label for="email">first name</label>
-                        <input type="text" id="firstName" name="firstName">
+<%- include('./pages/header') %> 
 
-                        <label for="lastName">last name</label>
-                        <input type="text" id="lastName" name="lastName" >
+<% if (dashboard == 'false') { %>
 
-                        <label for="eail">email</label>
-                        <input type="email" id="eail" name="email">
+  <%- include('./pages/content/main.ejs') %> 
 
-                        <label for="tel">telephone</label>
-                        <input type="tel"  id="tel" name="phone">
+<% } %> 
 
-                        <label for="message">message</label>
-                        <textarea  id="message" name="message" cols="30" rows="10"></textarea>
 
-                        <input type="submit" value="envoyer" class="submit">
-                    </form>
-                   <p><span>email personnel:</span> <span>ibrahimsyllac196@gmail.com</span></p>
-                </div>
+<% if (dashboard == 'true') { %>
 
-               </div>
-           </main>
-       </section>
-       <section class="app__login">
-           <div class="app__login--container">
 
-               <div class="exit">
-                   <img src="exit.png" alt="quitter">
-                </div>
-                <h1>login</h1>
-                <div class="form">
-                    <form action="/admis" method="post">
-                        <label for="email">email</label>
-                        <input type="email" id="email" name="email">
-                        
-                        <label for="password">password</label>
-                        <input type="password" id="password" name="password">
-                        
-                        <input type="submit" value="envoyer">
-                    </form>
-                </div>
-           </div>
-       </section>
-    </main>
-    <% } %>
-  <% if (dashboard == 'true') { %>
-   <h1>hello world</h1>
-  <% } %>
-  </body>
-</html>
+<main class="admis">
+    
+</main>
+
+
+<% } %>
+
+<%- include('./pages/footer.ejs') %> 
